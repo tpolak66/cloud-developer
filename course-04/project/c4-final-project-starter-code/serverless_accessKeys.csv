@@ -1,0 +1,5 @@
+Access key ID,Secret access key
+AKIA5YNIKC7MIPGIBXP3,XJaXiBtxgHcLoM3DQkEVbnGUvxEZzkvYyA3ASLDY
+,
+,
+sls config credentials --provider aws --key AKIA5YNIKC7MIPGIBXP3 --secret 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 --profile serverless,
