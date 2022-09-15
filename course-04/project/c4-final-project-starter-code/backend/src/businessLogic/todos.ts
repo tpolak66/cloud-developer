@@ -15,12 +15,15 @@ export async function getTodosForUser(userId: string): Promise<TodoItem[]> {
     return todosAccess.getTodosForUser(userId);
 }
 
-export function createTodo(createTodoRequest: CreateTodoRequest, userId: string): Promise<TodoItem> {
+export function createTodo(createTodoRequest: CreateTodoRequest, userId: string, name: string, dueDate: string, attachmentUrl: string): Promise<TodoItem> {
     return todosAccess.createTodo({
-        userId: userId,
         todoId: uuid(),
         createdAt: new Date().getTime().toString(),
+        name: name,
+        dueDate: dueDate,
         done: false,
+        attachmentUrl: attachmentUrl,
+        userId: userId,
         ...createTodoRequest,
     });
 }

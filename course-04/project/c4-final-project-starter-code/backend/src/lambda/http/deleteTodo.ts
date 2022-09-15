@@ -16,16 +16,7 @@ export const handler = middy(
   const userId = getUserId(event);
   const todo = await deleteTodo(todoId, userId);
   logger.info(todo)
-    // if(!todo){
-    //   return {
-    //     statusCode: 404,
-    //     headers:{
-    //       'Access-Control-Allow-Origin':'*'
-    //     },
-    //     body: JSON.stringify({message: 'Todo not found'})
-    //   }
-    // }
-  
+
     return {
       statusCode: 204,
       headers:{
